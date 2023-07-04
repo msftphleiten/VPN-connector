@@ -1,0 +1,6 @@
+Type,Value
+#DNS,test.azure.com
+#IP,1.2.3.4
+#Subnet,192.168.0.0/24
+DNS,mgmt1.northeurope.cloudapp.azure.com
+DNS,bst-bfcb383a-ad05-4db1-8e7e-e5928cf508e5.bastion.azure.com

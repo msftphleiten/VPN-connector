@@ -4,7 +4,8 @@
 #Requires -RunAsAdministrator
 
 $_VPNConnectionName = "MSFTVPN-Manual"
-$_RouteFileName = "routes.json"
+#$_RouteFileName = "routes.json"
+$_RouteFileName = "routes.csv"
 $_rasexecutable = "rasdial.exe"
 
 # check if already connected to VPN
@@ -39,8 +40,10 @@ Write-Host "IP address of VPN interface is $_ipaddress"
 $_activeroutes = Get-NetRoute
 
 # add routes 
-$_routes = Get-Content $_RouteFileName | ConvertFrom-Json
-foreach ($_route in $_routes.VPNRoutes) {
+#$_routes = Get-Content $_RouteFileName | ConvertFrom-Json
+$_routes = Get-Content $_RouteFileName | ConvertFrom-Csv -Delimiter ","
+#foreach ($_route in $_routes.VPNRoutes) {
+foreach ($_route in $_routes) {
 
     if ($_route.Type -eq "DNS") {
         $_routeip = (Resolve-DnsName $_route.Value).IPAddress
