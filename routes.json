@@ -1,0 +1,13 @@
+{
+    "VPNRoutes": 
+    [
+       {
+          "Type": "DNS",
+          "Value": "mgmt1.northeurope.cloudapp.azure.com"
+       },
+       {
+          "Type": "DNS",
+          "Value": "bst-bfcb383a-ad05-4db1-8e7e-e5928cf508e5.bastion.azure.com"
+       }
+    ]
+ }
