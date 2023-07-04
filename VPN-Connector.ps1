@@ -1,4 +1,19 @@
-# Script to automatically connect to MSFTVPN-Manual and create routes for easier access to VMs and Bastion hosts
+<#
+
+.SYNOPSIS
+    VPN Connector
+
+.DESCRIPTION
+    The script enables the preexisting VPN connection and adds routes to it.
+
+.LINK
+    https://github.com/msftphleiten/VPN-connector
+
+#>
+<#
+Copyright (c) Microsoft Corporation.
+Licensed under the MIT license.
+#>
 
 #requires -version 7.1
 #Requires -RunAsAdministrator
